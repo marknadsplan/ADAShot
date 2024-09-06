@@ -1,0 +1,10 @@
+project ADAShot is
+   for Source_Dirs use ("src/ada");
+   for Object_Dir use "obj";
+   for Exec_Dir use "bin";
+   for Main use ("main.adb");
+   
+   package Linker is
+      for Default_Switches ("ada") use ("-L" & project'Project_Dir & "bin", "-lmylib");
+   end Linker;
+end ADAShot;

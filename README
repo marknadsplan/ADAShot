@@ -1,0 +1,18 @@
+# ADAShot
+
+## Files
+- gnat-[version]-windows-x86_64-bin.exe
+- ADAShot/src/ada/main.adb
+- ADAShot/src/cpp/mylib.cpp
+- ADAShot/project.gpr
+
+## Build
+1. Compile C++:
+   g++ -c -DBUILDING_DLL src/cpp/mylib.cpp -o obj/mylib.o
+   g++ -shared -o bin/mylib.dll obj/mylib.o -Wl,--out-implib,bin/libmylib.a
+
+2. Build Ada:
+   gprbuild -P project.gpr
+
+## Run
+bin\main.exe
