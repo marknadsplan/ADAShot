@@ -1,18 +1,14 @@
 # ADAShot
 
-## Files
+## Pre-requisites
+- C++ compiler installed
+- Visual Studio 2022 installed
+
+## Install
 - gnat-[version]-windows-x86_64-bin.exe
-- ADAShot/src/ada/main.adb
-- ADAShot/src/cpp/mylib.cpp
-- ADAShot/project.gpr
 
 ## Build
-1. Compile C++:
-   g++ -c -DBUILDING_DLL src/cpp/mylib.cpp -o obj/mylib.o
-   g++ -shared -o bin/mylib.dll obj/mylib.o -Wl,--out-implib,bin/libmylib.a
-
-2. Build Ada:
-   gprbuild -P project.gpr
+run compile.bat
 
 ## Run
 bin\main.exe
