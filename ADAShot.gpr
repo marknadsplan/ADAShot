@@ -5,6 +5,6 @@ project ADAShot is
    for Main use ("main.adb");
    
    package Linker is
-      for Default_Switches ("ada") use ("-L" & project'Project_Dir & "bin", "-lmylib");
+      for Default_Switches ("ada") use ("-L" & ADAShot'Project_Dir & "bin", "-lmylib");
    end Linker;
 end ADAShot;
